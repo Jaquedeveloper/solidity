@@ -7,6 +7,7 @@ Compiler Features:
 
 
 Bugfixes:
+ * ABIEncoderV2: Fixed internal compiler error related to ecrecover.
  * Yul: Properly detect name clashes with functions before their declaration.
 
 
