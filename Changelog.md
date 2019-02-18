@@ -7,6 +7,7 @@ Compiler Features:
 
 
 Bugfixes:
+ * ABIEncoderV2: Fix internal error related to bare delegatecall.
  * Yul: Properly detect name clashes with functions before their declaration.
 
 
