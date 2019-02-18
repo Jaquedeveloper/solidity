@@ -682,7 +682,7 @@ BOOST_AUTO_TEST_CASE(inline_assembly_shadowed_instruction_assignment)
 
 BOOST_AUTO_TEST_CASE(inline_assembly_shadowed_instruction_functional_assignment)
 {
-	CHECK_ASSEMBLE_ERROR("{ gas := 2 }", ParserError, "Label name / variable name must precede \":\"");
+	CHECK_ASSEMBLE_ERROR("{ gas := 2 }", ParserError, "Variable name must precede \":=\"");
 }
 
 BOOST_AUTO_TEST_CASE(revert)

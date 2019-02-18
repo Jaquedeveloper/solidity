@@ -217,7 +217,7 @@ BOOST_AUTO_TEST_CASE(tokens_as_identifers)
 
 BOOST_AUTO_TEST_CASE(lacking_types)
 {
-	CHECK_ERROR("{ let x := 1:u256 }", ParserError, "Expected identifier but got '='");
+	CHECK_ERROR("{ let x := 1:u256 }", ParserError, "Expected ':' but got ':='");
 	CHECK_ERROR("{ let x:u256 := 1 }", ParserError, "Expected ':' but got '}'");
 	CHECK_ERROR("{ function f(a) {} }", ParserError, "Expected ':' but got ')'");
 	CHECK_ERROR("{ function f(a:u256) -> b {} }", ParserError, "Expected ':' but got '{'");
