@@ -52,7 +52,8 @@ bool AsmAnalyzer::analyze(Block const& _block)
 	if (!(ScopeFiller(m_info, m_errorReporter))(_block))
 		return false;
 
-	return (*this)(_block);
+	bool success = (*this)(_block);
+	return success && !m_errorReporter.hasErrors();
 }
 
 AsmAnalysisInfo AsmAnalyzer::analyzeStrictAssertCorrect(
